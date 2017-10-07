@@ -2,12 +2,20 @@
   "name": "youtube-comment-scraper-cli",
   "version": "0.0.1",
   "description": "Command line utility for scraping youtube comments",
+  "author": "Philip Klostermann <philip.klostermann@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philbot9/youtube-comment-scraper-cli/issues"
+  },
+  "homepage": "https://github.com/philbot9/youtube-comment-scraper-cli#readme",
   "main": "index.js",
   "bin": {
-    "youtube-comment-scraper": "./index.js"
+    "youtube-comment-scraper": "./bin/youtube-comment-scraper.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepublish": "yarn test"
   },
   "repository": {
     "type": "git",
@@ -22,16 +30,14 @@
     "line",
     "terminal"
   ],
-  "author": "Philip Klostermann <philip.klostermann@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/philbot9/youtube-comment-scraper-cli/issues"
-  },
-  "homepage": "https://github.com/philbot9/youtube-comment-scraper-cli#readme",
   "devDependencies": {
     "jest": "^21.2.1"
   },
   "jest": {
     "testEnvironment": "node"
+  },
+  "dependencies": {
+    "commander": "^2.11.0",
+    "ramda": "^0.24.1"
   }
 }

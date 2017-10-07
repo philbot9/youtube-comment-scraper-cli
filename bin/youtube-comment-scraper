@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+const program = require('commander')
+const R = require('ramda')
+const pkg = require('../package.json')
+
+program
+  .arguments('<VideoID>')
+  .option(
+    '-f --format <format>',
+    'output format (json or csv)',
+    /^(json|csv)$/i,
+    'json'
+  )
+  .option('-o --outputFile <outputFile>', 'write results to the given file')
+  .option('-d --stdout', 'write results to stdout')
+  .option('-n --noReplies', 'Skip replies to comments')
+  .option(
+    '-c --collapseReplies',
+    'Collapse replies and treat them the same as regular comments'
+  )
+  .option(
+    '-s --stream',
+    'output comments one-at-a-time as they are being scraped'
+  )
+  .on('--help', () =>
+    console.log(
+      [
+        '',
+        '  Examples:',
+        '',
+        '    $ youtube-comment-scraper -f json pU9Q6oiQNd0',
+        ''
+      ].join('\n')
+    )
+  )
+  .version(pkg.version)
+
+const opts = R.pick(
+  ['format', 'outputFile', 'stdout', 'noReplies', 'collapseReplies', 'stream'],
+  program.parse(process.argv)
+)
+
+console.log(opts)
