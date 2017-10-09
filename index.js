@@ -1,8 +1,1 @@
-// index.js
-
-module.exports = 
-
-const {
-  videoId,
-
-}
+module.exports = require('lib/scrapeComments')
