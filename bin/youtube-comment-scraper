@@ -15,7 +15,6 @@ program
   )
   .option('-o --outputFile <outputFile>', 'write results to the given file')
   .option('-d --stdout', 'write results to stdout')
-  .option('-n --noReplies', 'Skip replies to comments')
   .option(
     '-c --collapseReplies',
     'Collapse replies and treat them the same as regular comments'
@@ -47,7 +46,7 @@ if (!videoId) {
 }
 
 const opts = R.pick(
-  ['format', 'outputFile', 'stdout', 'noReplies', 'collapseReplies', 'stream'],
+  ['format', 'outputFile', 'stdout', 'collapseReplies', 'stream'],
   program
 )
 
