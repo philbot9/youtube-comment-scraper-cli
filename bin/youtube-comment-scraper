@@ -2,15 +2,16 @@
 
 const program = require('commander')
 const R = require('ramda')
+
 const pkg = require('../package.json')
+const scrapeComments = require('../index')
 
 program
   .arguments('<VideoID>')
   .option(
     '-f --format <format>',
     'output format (json or csv)',
-    /^(json|csv)$/i,
-    'json'
+    /^(json|csv)$/i
   )
   .option('-o --outputFile <outputFile>', 'write results to the given file')
   .option('-d --stdout', 'write results to stdout')
@@ -35,10 +36,19 @@ program
     )
   )
   .version(pkg.version)
+  .parse(process.argv)
+
+const videoId = program.args[0]
+
+if (!videoId) {
+  console.error('Please provide a VideoID.')
+  program.outputHelp()
+  process.exit(1)
+}
 
 const opts = R.pick(
   ['format', 'outputFile', 'stdout', 'noReplies', 'collapseReplies', 'stream'],
-  program.parse(process.argv)
+  program
 )
 
-console.log(opts)
+scrapeComments(videoId, opts)

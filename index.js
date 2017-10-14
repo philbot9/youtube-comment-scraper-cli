@@ -1,1 +1,1 @@
-module.exports = require('lib/scrapeComments')
+module.exports = require('./lib/scrape-comments')
