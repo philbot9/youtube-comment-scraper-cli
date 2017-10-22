@@ -69,6 +69,7 @@ The comments can be formatted as either JSON or CSV data. Defaults to JSON if no
 
 `youtube-comment-scraper --format json <VideoID>`
 
+---
 
 ### Output File
 
@@ -82,6 +83,7 @@ The comments can be written directly to a file. In that case they will not be wr
 
 `youtube-comment-scraper --outputFile some-file.csv --stdout --format csv <VideoID>`
 
+---
 
 ### Stdout
 
@@ -95,6 +97,7 @@ By default comments are always written to stdout (even without the `--stdout` fl
 
 `youtube-comment-scraper --outputFile ./some/file --stdout <VideoID>`
 
+---
 
 ### Collapse Replies
 
@@ -108,6 +111,7 @@ By default replies to comments are kept nested under that comment. If `--collaps
 
 `youtube-comment-scraper --collapseReplies --format csv <VideoID>`
 
+---
 
 ### Stream
 
@@ -125,6 +129,7 @@ By default the program will scrape all comments without outputting any of them u
 
 `youtube-comment-scraper --stream <VideoID> > json-processing-tool`
 
+---
 
 ### Version
 
@@ -138,6 +143,8 @@ Output the current version of the program.
 
 `youtube-comment-scraper --version`
 
+
+---
 
 ### Help
 
