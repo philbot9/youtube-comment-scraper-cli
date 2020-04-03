@@ -20,10 +20,14 @@ If you prefer a simple-to-use online solution, please go to http://ytcomments.kl
 
 ## Usage
 
-### Commad
+### Command
 
 `$ youtube-comment-scraper [options] <VideoID>`
 
+
+### Tutorial
+
+For more detailed instructions suitable for beginners take a look at the [NetLab Tutorial](http://www.netlab.dk/services/tools-and-tutorials/youtube-comment-scraper/).
 
 #### Where's the VideoId?
 
