@@ -1,6 +1,6 @@
 {
   "name": "youtube-comment-scraper-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Command line utility for scraping youtube comments",
   "author": "Philip Klostermann <philip.klostermann@gmail.com>",
   "license": "ISC",
