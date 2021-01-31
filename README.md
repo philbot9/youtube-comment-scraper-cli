@@ -1,13 +1,14 @@
 # YouTube Comment Scraper
 
-[![Build Status](https://travis-ci.org/philbot9/youtube-comment-scraper-cli.svg?branch=master)](https://travis-ci.org/philbot9/youtube-comment-scraper-cli)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+## Deprecation Notice
+
+This package has been deprecated and no longer works.
+
+## About
 
 Command line utility for scraping YouTube comments.
 
 If you prefer a simple-to-use online solution, please go to http://ytcomments.klostermann.ca.
-
-
 
 ## Installation
 
@@ -16,14 +17,11 @@ If you prefer a simple-to-use online solution, please go to http://ytcomments.kl
 3. The program can be run from the command line with `youtube-comment-scraper <VideoID>`
 4. Read the rest of the docs or check out `youtube-comment-scraper --help`
 
-
-
 ## Usage
 
 ### Command
 
 `$ youtube-comment-scraper [options] <VideoID>`
-
 
 ### Tutorial
 
@@ -31,33 +29,28 @@ For more detailed instructions suitable for beginners take a look at the [NetLab
 
 #### Where's the VideoId?
 
-It's part of the video URL: `https://www.youtube.com/watch?v=<VideoID>`. 
+It's part of the video URL: `https://www.youtube.com/watch?v=<VideoID>`.
 
 **Examples:**
 
-| Video URL     | Video ID    |
-| ------------- |:-------------:|
+| Video URL                                   |  Video ID   |
+| ------------------------------------------- | :---------: |
 | https://www.youtube.com/watch?v=abc123def45 | abc123def12 |
-| https://youtu.be/abc123def45 | abc123def45 |
-
+| https://youtu.be/abc123def45                | abc123def45 |
 
 ### Options
 
 **All command line options are optional (d'oh), except for the VideoID parameter.**
 
-| Option | Description|
-|---|---|
-|    [`-f --format <format>`](#format)         | output format (json or csv)
-|    [`-o --outputFile <outputFile>`](#output-file) | write results to the given file
-|    [`-d --stdout`](#stdout)                  | write results to stdout
-|    [`-c --collapseReplies`](#collapse-replies)         | collapse replies and treat them the same as regular comments
-|    [`-s --stream`](#stream)                  | output comments one-at-a-time as they are being scraped
-|    [`-V, --version`](#version)                | output the version number
-|    [`-h, --help`](#help)                   | output usage information
-
-
-
-
+| Option                                         | Description                                                  |
+| ---------------------------------------------- | ------------------------------------------------------------ |
+| [`-f --format <format>`](#format)              | output format (json or csv)                                  |
+| [`-o --outputFile <outputFile>`](#output-file) | write results to the given file                              |
+| [`-d --stdout`](#stdout)                       | write results to stdout                                      |
+| [`-c --collapseReplies`](#collapse-replies)    | collapse replies and treat them the same as regular comments |
+| [`-s --stream`](#stream)                       | output comments one-at-a-time as they are being scraped      |
+| [`-V, --version`](#version)                    | output the version number                                    |
+| [`-h, --help`](#help)                          | output usage information                                     |
 
 ## Options explained
 
@@ -147,7 +140,6 @@ Output the current version of the program.
 
 `youtube-comment-scraper --version`
 
-
 ---
 
 ### Help
@@ -161,4 +153,3 @@ Output usage help.
 `youtube-comment-scraper -h`
 
 `youtube-comment-scraper --help`
-
